@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>BUTTS ONLY</title>
+    <meta charset="UTF-8">
     <style>
       @import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
 
@@ -16,13 +17,23 @@
         text-align: center;
       }
 
-      #title {
+      .title {
         background-color: purple;
         color: yellow;
-        font-size: 120px;
-        margin: 200px auto 0;
-        padding: 40px 0;
         text-shadow: 10px 10px grey;
+      }
+
+      #welcome {
+        font-size: 80px;
+        margin: 200px auto 0;
+        width: 40%;
+      }
+
+      #rotate {
+        font-size: 140px;
+        margin: 0 auto;
+        padding: 40px 0;
+        width: 80%;
 
         /* Animation code from https://jsfiddle.net/gaby/9Ryvs/7/ */
         -webkit-animation-name: spin;
@@ -64,10 +75,35 @@
               transform:rotate(360deg);
           }
       }
+
+      #scroll {
+        color: white;
+        font-family: monospace;
+        margin-bottom: 200px;
+        text-shadow: 5px 5px grey;
+      }
+
+      #go {
+        animation: blinker 1s linear infinite;
+        background-color: blue;
+        color: yellow;
+        margin: 200px auto 0;
+        padding: 40px 40px;
+      }
+
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
     </style>
   </head>
   <body>
-    <p id="title">WELCOME TO BUTTS ONLY</p>
+    <img src="images/pizza.gif" alt="when we sell out, we order out" width="100" style="position: absolute; top: 0; left: 0;">
+    <img src="images/pizza.gif" alt="when we sell out, we order out" width="100" style="position: absolute; top: 0; right: 0;">
+    <p id="welcome" class="title">WELCOME TO</p>
+    <p id="rotate" class="title"> &#x1F351 BUTTS ONLY &#x1F351</p>
+    <p id="scroll">&#x2B07 &#x2B07 &#x2B07 SCROLL DOWN &#x2B07 &#x2B07 &#x2B07</p>
     <p>YOU MAY NOT FACE THE CAMERA</p>
     <p>BUTTS ONLY AT ALL TIMES</p>
     <p>YOU MAY, HOWEVER, PUT A FACE ON YOUR BUTT, IF YOU WISH</p>
@@ -78,6 +114,9 @@
     <p>JUST MAKE SURE YOUR BUTT IS FRONT AND CENTER</p>
     <p>THIS POLICY WILL BE STRICTLY ENFORCED</p>
     <p>THANK YOU FOR YOUR COMPLIANCE</p>
-    <p><a href="https://bit.ly/3cr3fu8-butts-only-room">GO</a></p>
+    <p><a id="go" href="https://bit.ly/3cr3fu8-butts-only-room">GO</a></p>
+    <p>
+      <img src="images/hoyb.gif" alt="hold on to your butts">
+    </p>
   </body>
 </html>
